@@ -1,0 +1,15 @@
+db/schema.sql
+
+-- Schema for the customer app
+CREATE DATABASE IF NOT EXISTS customer_app_db
+
+USE customer_app_db;
+
+CREATE TABLE IF NOT EXISTS customer (
+  Customer_Id INT PRIMARY KEY,           -- use AUTO_INCREMENT if you prefer
+  firstName   VARCHAR(20)  NOT NULL,
+  lastName    VARCHAR(20)  NOT NULL,
+  Email       VARCHAR(100) NOT NULL,
+  Phone       VARCHAR(20)  NOT NULL,
+  CreatedAt   TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) 
